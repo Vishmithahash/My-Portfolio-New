@@ -1,12 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css'; // Make sure this file contains the Tailwind directives
 
 function App() {
   return (
-    <div>
-      <h1>Hello, React + Vite!</h1>
+    <div className="bg-blue-500 text-white text-2xl p-4 rounded-xl">
+      Tailwind CSS is working!
     </div>
   );
 }
