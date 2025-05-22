@@ -41,7 +41,7 @@ const projectsData = [
     image:
       'https://i.postimg.cc/cJypMBC4/Screenshot-2025-05-22-195113.png',
     technologies: ['React', 'Tailwind CSS', 'JavaScript'],
-    demoLink: '#',
+    demoLink: 'https://travel-app-gray-eight.vercel.app/',
     codeLink: 'https://github.com/Vishmithahash/Travel-Web-App',
     category: 'Frontend',
   },

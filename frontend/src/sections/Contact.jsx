@@ -164,7 +164,7 @@ const Contact = () => {
               </h3>
               <div className="flex space-x-4">
                 <a
-                  href="https://www.facebook.com"
+                  href="https://web.facebook.com/vishmitha.hashendra.3"
                   className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
                   aria-label="Follow on Facebook"
                 >
@@ -200,7 +200,7 @@ const Contact = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/vishmitha-hashendra-a1b3a0281/"
+                  href="https://www.linkedin.com/in/vishmitha-hashendra-419b072b0/"
                   className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
                   aria-label="Follow on LinkedIn"
                 >
