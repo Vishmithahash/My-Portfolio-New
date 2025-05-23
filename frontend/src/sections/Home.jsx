@@ -1,13 +1,13 @@
-import React from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import CvMyPdf from '../assets/CvMy.pdf'
+import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import CvMyPdf from '../assets/CvMy.pdf';
 import {
   GithubIcon,
   LinkedinIcon,
   DownloadIcon,
   ChevronDownIcon,
-} from 'lucide-react'
-import { Link } from 'react-scroll'
+} from 'lucide-react';
+import { Link } from 'react-scroll';
 
 const Home = () => {
   const floatingAnimation = {
@@ -18,7 +18,7 @@ const Home = () => {
       repeatType: 'reverse',
       ease: 'easeInOut',
     },
-  }
+  };
 
   const particleVariants = {
     animate: {
@@ -30,7 +30,7 @@ const Home = () => {
         ease: 'easeInOut',
       },
     },
-  }
+  };
 
   const waveAnimation = {
     animate: {
@@ -41,25 +41,29 @@ const Home = () => {
         ease: 'easeInOut',
       },
     },
-  }
+  };
 
   return (
     <section
       id="home"
-      className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-100 dark:from-gray-900 dark:via-gray-800 dark:to-blue-950"
+      className="min-h-screen relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-950"
     >
       {/* Animated Background Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {Array.from({ length: 25 }).map((_, i) => (
+        {Array.from({ length: 40 }).map((_, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full"
             style={{
-              width: Math.random() * 80 + 20,
-              height: Math.random() * 80 + 20,
+              width: Math.random() * 60 + 10,
+              height: Math.random() * 60 + 10,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              background: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.1)`,
+              background: `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(
+                Math.random() * 255
+              )}, ${Math.floor(Math.random() * 255)}, 0.1)`,
+              backdropFilter: 'blur(2px)',
+              boxShadow: '0 0 10px rgba(255,255,255,0.1)',
             }}
             variants={particleVariants}
             animate="animate"
@@ -67,6 +71,7 @@ const Home = () => {
           />
         ))}
       </div>
+
       {/* Main Content */}
       <div className="container mx-auto px-4 min-h-screen flex flex-col justify-center relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -75,36 +80,37 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1 text-center lg:text-left p-6 lg:p-10 bg-white/80 dark:bg-gray-800/80 rounded-xl shadow-lg backdrop-blur-sm"
+            className="order-2 lg:order-1 text-center lg:text-left p-6 lg:p-10 bg-white/80 dark:bg-gray-800/80 rounded-xl shadow-xl backdrop-blur-sm border border-gray-200 dark:border-gray-700"
           >
-            {/* Greeting */}
+            {/* Greeting Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20, rotate: -5 }}
               animate={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="mb-6"
+              className="mb-6 inline-block"
             >
-              <span className="px-6 py-3 rounded-full bg-blue-100/70 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-sm font-medium shadow-md backdrop-blur-md">
+              <span className="px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-sm font-medium shadow-md">
                 Welcome to my portfolio
               </span>
             </motion.div>
+
             {/* Name and Title */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-cyan-500 dark:from-cyan-300 dark:to-blue-300 text-blue-900 dark:text-cyan-100">
-                {"Hi, I'm Vishmitha".split("").map((char, index) => (
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-purple-500 dark:from-purple-300 dark:to-indigo-300">
+                {"Hi, I'm Vishmitha".split('').map((char, index) => (
                   <motion.span
                     key={index}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6 + index * 0.05, duration: 0.05 }}
-                    className="inline"
+                    className="inline-block"
                   >
-                    {char === " " ? <span> </span> : char}
+                    {char === ' ' ? <span> </span> : char}
                   </motion.span>
                 ))}
                 <br />
@@ -113,21 +119,21 @@ const Home = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.2, duration: 0.5 }}
                 >
-                  {"Hashendra".split("").map((char, index) => (
+                  {"Hashendra".split('').map((char, index) => (
                     <motion.span
                       key={index}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 1.2 + index * 0.05, duration: 0.05 }}
-                      className="inline"
+                      className="inline-block"
                     >
-                      {char === " " ? <span> </span> : char}
+                      {char === ' ' ? <span> </span> : char}
                     </motion.span>
                   ))}
                 </motion.span>
-                <span className="relative inline-block">
+                <span className="relative inline-block ml-1">
                   <motion.span
-                    className="absolute -bottom-2 left-0 w-full h-1 bg-blue-500 dark:bg-blue-400"
+                    className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-500"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: 1.0, duration: 0.8 }}
@@ -135,7 +141,8 @@ const Home = () => {
                 </span>
               </span>
             </motion.h1>
-            {/* Role */}
+
+            {/* Role Description */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -143,7 +150,7 @@ const Home = () => {
               className="mb-8"
             >
               <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium">
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 text-transparent bg-clip-text">
+                <span className="bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 text-transparent bg-clip-text">
                   Undergraduate Software Engineer
                 </span>
               </h2>
@@ -151,6 +158,7 @@ const Home = () => {
                 Passionate about crafting innovative solutions through code. I specialize in full-stack development for both web and mobile platforms, using modern technologies to deliver efficient, user-friendly applications.
               </p>
             </motion.div>
+
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -163,37 +171,46 @@ const Home = () => {
                 download
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05, y: -5 }}
+                whileHover={{ scale: 1.05, y: -5, boxShadow: '0 8px 20px rgba(79, 70, 229, 0.3)' }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-md bg-white/30 dark:bg-gray-800/30"
+                className="inline-flex items-center px-8 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-md"
               >
                 <DownloadIcon className="w-5 h-5 mr-2" />
                 Download CV
               </motion.a>
+
               <div className="flex items-center gap-4">
                 <motion.a
-                  href="https://github.com/Vishmithahash"
+                  href="https://github.com/Vishmithahash "
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, boxShadow: '0 0 15px rgba(59, 130, 246, 0.5)' }}
+                  whileHover={{
+                    scale: 1.2,
+                    boxShadow: '0 0 15px rgba(79, 70, 229, 0.5)',
+                  }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform-gpu hover:rotate-12"
                 >
-                  <GithubIcon className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
+                  <GithubIcon className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" />
                 </motion.a>
+
                 <motion.a
-                  href="https://www.linkedin.com/in/vishmitha-hashendra-419b072b0"
+                  href="https://www.linkedin.com/in/vishmitha-hashendra-419b072b0 "
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, boxShadow: '0 0 15px rgba(59, 130, 246, 0.5)' }}
+                  whileHover={{
+                    scale: 1.2,
+                    boxShadow: '0 0 15px rgba(79, 70, 229, 0.5)',
+                  }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform-gpu hover:-rotate-12"
                 >
-                  <LinkedinIcon className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
+                  <LinkedinIcon className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" />
                 </motion.a>
               </div>
             </motion.div>
           </motion.div>
+
           {/* Profile Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -202,9 +219,9 @@ const Home = () => {
             className="order-1 lg:order-2 relative"
           >
             <div className="relative mx-auto w-72 h-72 md:w-96 md:h-96">
-              {/* Animated background elements */}
+              {/* Animated background rings */}
               <motion.div
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 opacity-20 blur-3xl"
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-400 to-purple-400 opacity-20 blur-3xl"
                 animate={{
                   scale: [1, 1.2, 1],
                   rotate: [0, 180, 360],
@@ -216,7 +233,7 @@ const Home = () => {
                 }}
               />
               <motion.div
-                className="absolute inset-4 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 opacity-20 blur-3xl"
+                className="absolute inset-4 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 opacity-20 blur-3xl"
                 animate={{
                   scale: [1.2, 1, 1.2],
                   rotate: [360, 180, 0],
@@ -227,22 +244,27 @@ const Home = () => {
                   ease: 'linear',
                 }}
               />
+
               {/* Profile image container */}
               <motion.div
                 className="relative z-10 w-full h-full rounded-full border-8 border-white dark:border-gray-800 shadow-2xl overflow-hidden"
-                whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: '0 0 20px rgba(79, 70, 229, 0.5)',
+                }}
                 transition={{ duration: 0.3 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 dark:to-black/40" />
                 <img
-                  src="https://i.postimg.cc/CxRQLq4L/WhatsApp.jpg"
+                  src="https://i.postimg.cc/CxRQLq4L/WhatsApp.jpg "
                   alt="Vishmitha Hashendra"
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </motion.div>
+
               {/* Decorative elements */}
               <motion.div
-                className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl"
+                className="absolute -top-4 -right-4 w-24 h-24 bg-indigo-500/20 rounded-full blur-xl"
                 animate={floatingAnimation}
               />
               <motion.div
@@ -253,6 +275,7 @@ const Home = () => {
             </div>
           </motion.div>
         </div>
+
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -286,13 +309,13 @@ const Home = () => {
               >
                 Scroll Down
               </motion.span>
-              <ChevronDownIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+              <ChevronDownIcon className="w-6 h-6 text-indigo-500 dark:text-indigo-400 drop-shadow-glow" />
             </motion.div>
           </Link>
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

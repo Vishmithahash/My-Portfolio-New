@@ -45,42 +45,37 @@ const projectsData = [
     codeLink: 'https://github.com/Vishmithahash/Travel-Web-App',
     category: 'Frontend',
   },
+
   {
-    id: 4,
-    title: 'Money Tracker Mobile Application',
-    description:
-      'A mobile application that provides real-time weather information based on location.',
-    image:
-      'https://i.postimg.cc/zfKGQ59r/Image-money-tracker.png',
-    technologies: ['Kotlin', 'Java', 'Shared Preference'],
-    demoLink: '#',
-    codeLink: 'https://github.com/Vishmithahash/Money-Tracker-Mobile-App',
-    category: 'Mobile',
+    "id": 4,
+    "title": "Money Tracker Mobile Application",
+    "description": "A personal finance management mobile app developed using Kotlin + Java for Android. It helps users track their income, expenses, set budgets, and stay financially organized — all offline, with smart local storage using SharedPreferences.",
+    "image": "https://i.postimg.cc/zfKGQ59r/Image-money-tracker.png ",
+    "technologies": ["Kotlin", "Java", "SharedPreferences"],
+    "demoLink": "#",
+    "codeLink": "https://github.com/Vishmithahash/Money-Tracker-Mobile-App ",
+    "category": "Mobile"
   },
   {
-    id: 5,
-    title: 'Lotus Award Ceremony - Online Award Platform',
-    description:
-      'A responsive personal portfolio website to showcase projects and skills.',
-    image:
-      'https://i.postimg.cc/L6GGwRHN/Ss-1.png',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-    demoLink: '#',
-    codeLink: 'https://github.com/Vishmithahash/Lotus-Award-Ceramony-HTML',
-    category: 'Full Stack',
+    "id": 5,
+    "title": "Lotus Award Ceremony - Online Award Platform",
+    "description": "A dynamic event-based web application built using HTML, CSS, JavaScript, PHP, and MySQL. It features a user login system, a voting mechanism for registered users, and an admin dashboard to manage award categories and view results.",
+    "image": "https://i.postimg.cc/L6GGwRHN/Ss-1.png ",
+    "technologies": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    "demoLink": "#",
+    "codeLink": "https://github.com/Vishmithahash/Lotus-Award-Ceramony-HTML ",
+    "category": "Full Stack"
   },
   {
-    id: 6,
-    title: 'Ceylon Flavours Mobile Application',
-    description:
-      'A comprehensive system for educational institutions to manage student data and academic records.',
-    image:
-      'https://i.postimg.cc/VLwhJZ24/image-app.png',
-    technologies: ['Kotlin', 'Java'],
-    demoLink: '#',
-    codeLink: 'https://github.com/Vishmithahash/Ceylon-Flavours-Mobile-App',
-    category: 'Mobile',
-  },
+    "id": 6,
+    "title": "Ceylon Flavours Mobile Application",
+    "description": "This is the mobile version of the Ceylon Flavours restaurant system — a Kotlin + Java Android app under development. Currently, it demonstrates navigation between core UI screens using Jetpack components like Navigation Graph and XML-based layouts.",
+    "image": "https://i.postimg.cc/VLwhJZ24/image-app.png ",
+    "technologies": ["Kotlin", "Java", "Android Studio", "Jetpack Navigation"],
+    "demoLink": "#",
+    "codeLink": "https://github.com/Vishmithahash/Ceylon-Flavours-Mobile-App ",
+    "category": "Mobile"
+  }
 ];
 
 const categories = ['All', 'Frontend', 'Backend', 'Full Stack', 'Mobile'];
