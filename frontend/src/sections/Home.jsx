@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import CvMyPdf from '../assets/CvMy.pdf';
+
 import {
   GithubIcon,
   LinkedinIcon,
@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-scroll';
 
+const CvMyPdf = '/CvMy.pdf';
 const Home = () => {
   const floatingAnimation = {
     y: ['-10px', '10px'],
@@ -181,7 +182,7 @@ const Home = () => {
 
               <div className="flex items-center gap-4">
                 <motion.a
-                  href="https://github.com/Vishmithahash "
+                  href="https://github.com/Vishmithahash"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{
@@ -195,7 +196,7 @@ const Home = () => {
                 </motion.a>
 
                 <motion.a
-                  href="https://www.linkedin.com/in/vishmitha-hashendra-419b072b0 "
+                  href="https://www.linkedin.com/in/vishmitha-hashendra-419b072b0"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{
@@ -254,9 +255,9 @@ const Home = () => {
                 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 dark:to-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 dark:to-black/40"/>
                 <img
-                  src="https://i.postimg.cc/CxRQLq4L/WhatsApp.jpg "
+                  src="/images/whatsApp.jpg"
                   alt="Vishmitha Hashendra"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
@@ -309,7 +310,7 @@ const Home = () => {
               >
                 Scroll Down
               </motion.span>
-              <ChevronDownIcon className="w-6 h-6 text-indigo-500 dark:text-indigo-400 drop-shadow-glow" />
+              <ChevronDownIcon className="w-6 h-6 text-indigo-500 dark:text-indigo-400 drop-shadow-glow"/>
             </motion.div>
           </Link>
         </motion.div>
