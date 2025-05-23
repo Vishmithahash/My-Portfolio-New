@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import CvMyPdf from '../assets/CvMy.pdf';
 import {
   GithubIcon,
@@ -50,7 +50,7 @@ const Home = () => {
     >
       {/* Animated Background Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {Array.from({ length: 40 }).map((_, i) => (
+        {Array.from({ length: 25 }).map((_, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full"
@@ -63,7 +63,7 @@ const Home = () => {
                 Math.random() * 255
               )}, ${Math.floor(Math.random() * 255)}, 0.1)`,
               backdropFilter: 'blur(2px)',
-              boxShadow: '0 0 10px rgba(255,255,255,0.1)',
+              boxShadow: '0 0 10px rgba(255,255,255, 0.1)',
             }}
             variants={particleVariants}
             animate="animate"
@@ -191,7 +191,7 @@ const Home = () => {
                   whileTap={{ scale: 0.95 }}
                   className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform-gpu hover:rotate-12"
                 >
-                  <GithubIcon className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" />
+                  <GithubIcon className="w-6 h-6 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" />
                 </motion.a>
 
                 <motion.a
@@ -205,7 +205,7 @@ const Home = () => {
                   whileTap={{ scale: 0.95 }}
                   className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform-gpu hover:-rotate-12"
                 >
-                  <LinkedinIcon className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" />
+                  <LinkedinIcon className="w-6 h-6 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" />
                 </motion.a>
               </div>
             </motion.div>
